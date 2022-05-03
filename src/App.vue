@@ -1,16 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>This is the app Component</h1>
+    <Detail />
+     <Show >
+        {{message}}
+      </Show>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Detail from './components/Detail.vue'
+import Show from './components/Show.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+   components : { Detail, Show },
+   data() {
+     return {
+       message: 'Message form parent',
+     }
+   }
 }
 </script>
 
@@ -23,4 +29,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
